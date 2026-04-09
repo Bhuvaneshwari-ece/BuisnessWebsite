@@ -29,18 +29,19 @@ namespace BuisnessWebsite.Controller
         }
 
         // GET: api/Messages/5
-        //[HttpGet("{id}")]
-        //public async Task<ActionResult<Message>> GetMessage(int id)
-        //{
-        //    var message = await _context.Messages.FindAsync(id);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Message>> GetMessage(int id)
+        {
+            var message = await _context.Messages.FindAsync(id);
 
-        //    if (message == null)
-        //    {
-        //        return NotFound();
-        //    }
+            if (message == null)
+            {
+                return NotFound();
+            }
 
-        //    return message;
-        //}
+            return message;
+        }
+        //hello
 
         // PUT: api/Messages/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
